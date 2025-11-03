@@ -1,14 +1,16 @@
-import React from 'react'
-import './App.css'
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+
 
 function App() {
-  
-
   return (
-    <>
-     <h1 className='text-amber-300'>Hello world</h1>
-    </>
-  )
-}
+    <Router>
+      <Routes>
 
-export default App
+        <Route path="/" element={<Home />} />
+        
+      </Routes>
+    </Router>
+  );
+}
+export default App;
