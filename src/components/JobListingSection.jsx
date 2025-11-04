@@ -100,8 +100,8 @@ const JobListingSection = () => {
                 </div>
 
                 {/* Search Bar */}
-                <div className="flex gap-3 mb-4">
-                    <div className="flex-1 flex items-center gap-2 bg-white rounded-md px-3 py-2.5">
+                <div className="flex justify-between gap-3 mb-4">
+                    <div className=" flex w-[350px] items-center gap-2 bg-white border border-gray-300 rounded-md px-3 py-2.5">
                         <IoSearchOutline className="text-gray-400 text-lg" />
                         <input
                             type="text"
@@ -109,7 +109,7 @@ const JobListingSection = () => {
                             className="flex-1 outline-none text-sm"
                         />
                     </div>
-                    <div className="flex-1 flex items-center gap-2 bg-white border border-gray-300 rounded-md px-3 py-2.5">
+                    <div className=" flex items-center gap-2 bg-white border border-gray-300 rounded-md px-3 py-2.5">
                         <IoLocationOutline className="text-gray-400 text-lg" />
                         <input
                             type="text"
@@ -117,16 +117,18 @@ const JobListingSection = () => {
                             className="flex-1 outline-none text-sm"
                         />
                     </div>
-                    <select className="bg-white border border-gray-300 rounded-md px-3 py-2.5 text-sm text-gray-600 outline-none cursor-pointer">
-                        <option>Job Type</option>
-                        <option>Full-Time</option>
-                        <option>Part-Time</option>
-                        <option>Remote</option>
-                    </select>
-                    <button className="bg-[#0154AA] text-white px-6 py-2.5 rounded-lg hover:bg-blue-700 transition-colors flex items-center gap-2 font-medium">
-                        <IoSearchOutline className="text-lg" />
-                        Search
-                    </button>
+                    <div className='flex justify-center items-center'>
+                        <select className="bg-white border border-gray-300 rounded-md px-3 py-2.5 text-sm text-gray-600 outline-none cursor-pointer">
+                            <option>Job Type</option>
+                            <option>Full-Time</option>
+                            <option>Part-Time</option>
+                            <option>Remote</option>
+                        </select>
+                    </div>
+                        <button className="bg-[#0154AA] text-white px-6 py-2.5 rounded-lg hover:bg-blue-700 transition-colors flex items-center gap-2 font-medium">
+                            <IoSearchOutline className="text-lg" />
+                            Search
+                        </button>
                 </div>
 
                 {/* Category Buttons */}
