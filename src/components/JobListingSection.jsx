@@ -78,7 +78,7 @@ const JobListingSection = () => {
                 </div>
                 
                 <div className="flex items-center gap-3 pt-2">
-                    <button className="flex-1 min-w-0 h-[38px] bg-[#0154AA] text-white text-xs sm:text-sm py-2 rounded-[7px] hover:bg-[#013d7a] active:bg-[#012d5a] transition-all duration-200 font-medium">
+                    <button className="flex-1 min-w-0 h-[38px] bg-[#0154AA] text-white text-xs sm:text-sm py-2 rounded-[7px] hover:bg-[#013d7a] active:bg-[#012d5a] transition-all duration-200 font-medium cursor-pointer">
                         Apply Now
                     </button>
                     <BsBookmark className="text-gray-400 cursor-pointer hover:text-[#0154AA] hover:scale-110 active:scale-95 transition-all duration-200 shrink-0" size={20} />
@@ -105,19 +105,19 @@ const JobListingSection = () => {
                 {/* Search Bar */}
                 <div className="flex flex-col md:flex-row gap-3 mb-4">
                     <div className="flex flex-1 items-center gap-2 bg-white border border-gray-300 rounded-md px-3 py-2.5">
-                        <IoSearchOutline className="text-gray-400 text-lg" />
+                        <IoSearchOutline className="text-gray-400 text-lg cursor-pointer" />
                         <input
                             type="text"
                             placeholder="Job Title, Company, or Keywords"
-                            className="flex-1 outline-none text-sm w-full"
+                            className="flex-1 outline-none text-sm w-full cursor-text"
                         />
                     </div>
                     <div className="flex flex-1 items-center gap-2 bg-white border border-gray-300 rounded-md px-3 py-2.5">
-                        <IoLocationOutline className="text-gray-400 text-lg" />
+                        <IoLocationOutline className="text-gray-400 text-lg cursor-pointer" />
                         <input
                             type="text"
                             placeholder="Select Location"
-                            className="flex-1 outline-none text-sm w-full"
+                            className="flex-1 outline-none text-sm w-full cursor-text"
                         />
                     </div>
                     <div className='flex justify-center items-center'>
@@ -128,7 +128,7 @@ const JobListingSection = () => {
                             <option>Remote</option>
                         </select>
                     </div>
-                    <button className="bg-[#0154AA] text-white px-6 py-2.5 rounded-lg hover:bg-[#013d7a] active:bg-[#012d5a] transition-all duration-200 flex items-center justify-center gap-2 font-medium">
+                    <button className="bg-[#0154AA] text-white px-6 py-2.5 rounded-lg hover:bg-[#013d7a] active:bg-[#012d5a] transition-all duration-200 flex items-center justify-center gap-2 font-medium cursor-pointer">
                         <IoSearchOutline className="text-lg" />
                         <span className="hidden sm:inline">Search</span>
                     </button>
@@ -140,7 +140,7 @@ const JobListingSection = () => {
                     {jobCategories.map((category, index) => (
                         <button
                             key={index}
-                            className="px-3 sm:px-4 py-2 bg-[#F6F9FF] border text-[#737A91] border-[#737A91] rounded-md text-xs sm:text-sm hover:bg-[#0154AA] hover:text-white hover:border-[#0154AA] transition-all duration-200"
+                            className="px-3 sm:px-4 py-2 bg-[#F6F9FF] border text-[#737A91] border-[#737A91] rounded-md text-xs sm:text-sm hover:bg-[#0154AA] hover:text-white hover:border-[#0154AA] transition-all duration-200 cursor-pointer"
                         >
                             {category}
                         </button>
@@ -152,7 +152,7 @@ const JobListingSection = () => {
             <div className="mb-6">
                 <div className="flex flex-col sm:flex-row sm:items-center gap-2 mb-3">
                     <h2 className="text-lg sm:text-[20px] text-gray-900 font-semibold">Featured Jobs</h2>
-                    <a href="#" className="text-xs sm:text-sm text-[#0154AA] underline sm:pl-2 hover:text-[#013d7a] transition-colors duration-200">See Featured Jobs</a>
+                    <a href="#" className="text-xs sm:text-sm text-[#0154AA] underline sm:pl-2 hover:text-[#013d7a] transition-colors duration-200 cursor-pointer">See Featured Jobs</a>
                 </div>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3">
                     {featuredJobs.map((job) => (
@@ -165,7 +165,7 @@ const JobListingSection = () => {
             <div className="mb-6">
                 <div className="flex flex-col sm:flex-row sm:items-center gap-2 mb-3">
                     <h2 className="text-lg sm:text-[20px] text-gray-900 font-semibold">Recommended Jobs</h2>
-                    <a href="#" className="text-xs sm:text-sm text-[#0154AA] underline sm:pl-2 hover:text-[#013d7a] transition-colors duration-200">See Recommended Jobs</a>
+                    <a href="#" className="text-xs sm:text-sm text-[#0154AA] underline sm:pl-2 hover:text-[#013d7a] transition-colors duration-200 cursor-pointer">See Recommended Jobs</a>
                 </div>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3">
                     {[...featuredJobs, ...featuredJobs].map((job, index) => (
@@ -178,7 +178,7 @@ const JobListingSection = () => {
             <div>
                 <div className="flex flex-col sm:flex-row sm:items-center gap-2 mb-3">
                     <h2 className="text-lg sm:text-[20px] text-gray-900 font-semibold">Latest Jobs</h2>
-                    <a href="#" className="text-xs sm:text-sm text-[#0154AA] underline sm:pl-2 hover:text-[#013d7a] transition-colors duration-200">See Latest Jobs</a>
+                    <a href="#" className="text-xs sm:text-sm text-[#0154AA] underline sm:pl-2 hover:text-[#013d7a] transition-colors duration-200 cursor-pointer">See Latest Jobs</a>
                 </div>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3">
                     {[...featuredJobs, ...featuredJobs].map((job, index) => (
