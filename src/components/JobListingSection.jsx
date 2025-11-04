@@ -1,12 +1,12 @@
 import React from 'react';
 import { IoSearchOutline, IoLocationOutline } from 'react-icons/io5';
-import { HiOutlineBriefcase } from 'react-icons/hi';
-import { BsBookmark } from 'react-icons/bs';
+
+import { BsBookmark, BsClock } from 'react-icons/bs';
 import logoPlaceholder from '../assets/images/Tlogo.png';
 
 
 const JobListingSection = () => {
-    const jobCategories = ['Full-Time', 'Remote', 'Topics Oriented'];
+    const jobCategories = ['Frontend', 'Backend', 'Graphic Designer'];
     
     const featuredJobs = [
         {
@@ -14,35 +14,32 @@ const JobListingSection = () => {
             title: 'UI/UX Designer',
             company: 'Spotify',
             type: 'Remote, USA (America)',
-            salary: 'Yearly: USD Amount [...]',
-            experience: '5-10 years'
+            timeAgo: '2 days ago',
+            applicants: '22 applicants'
         },
         {
             id: 2,
-          
             title: 'UI/UX Designer',
-            company: 'Spotify',
+            company: 'Teams',
             type: 'Remote, USA (America)',
-            salary: 'Yearly: USD Amount [...]',
-            experience: '5-10 years'
+            timeAgo: '2 days ago',
+            applicants: '22 applicants'
         },
         {
             id: 3,
-           
             title: 'UIUX Designer',
-            company: 'Spotify',
+            company: 'Transviti',
             type: 'Remote, USA (America)',
-            salary: 'Yearly: USD Amount [...]',
-            experience: '5-10 years'
+            timeAgo: '2 days ago',
+            applicants: '22 applicants'
         },
         {
             id: 4,
-            
             title: 'UI/UX Designer',
-            company: 'Spotify',
+            company: 'Ibex',
             type: 'Remote, USA (America)',
-            salary: 'Yearly: USD Amount [...]',
-            experience: '5-10 years'
+            timeAgo: '2 days ago',
+            applicants: '22 applicants'
         }
     ];
 
@@ -65,13 +62,11 @@ const JobListingSection = () => {
                             <IoLocationOutline className="text-sm shrink-0 mt-0.5" />
                             <span className="line-clamp-1">{job.type}</span>
                         </div>
-                        <div className="flex items-start gap-1.5 text-xs text-gray-600">
-                            <HiOutlineBriefcase className="text-sm shrink-0 mt-0.5" />
-                            <span className="line-clamp-1">{job.salary}</span>
-                        </div>
-                        <div className="flex items-start gap-1.5 text-xs text-gray-600">
-                            <HiOutlineBriefcase className="text-sm shrink-0 mt-0.5" />
-                            <span className="line-clamp-1">Minimum: {job.experience}</span>
+                        <div className="flex items-center gap-2 text-xs text-gray-600">
+                            <BsClock className="text-sm shrink-0" />
+                            <span>{job.timeAgo}</span>
+                            <span>•</span>
+                            <span>{job.applicants}</span>
                         </div>
                     </div>
                     <button className="w-full bg-[#0154AA] text-white text-xs py-2 rounded-md hover:bg-blue-700 transition-colors font-medium">
@@ -128,11 +123,12 @@ const JobListingSection = () => {
                 </div>
 
                 {/* Category Buttons */}
-                <div className="flex gap-3">
+                <div className="flex gap-3 text-[#737A91] items-center" >
+                    <p className=''>Similar:</p>
                     {jobCategories.map((category, index) => (
                         <button
                             key={index}
-                            className="px-4 py-2 bg-white border border-gray-300 rounded-md text-sm hover:bg-gray-50 transition-colors"
+                            className="px-4 py-2 bg-white border text-[#737A91]  border-[#737A91] rounded-md text-sm hover:bg-gray-50 transition-colors"
                         >
                             {category}
                         </button>
