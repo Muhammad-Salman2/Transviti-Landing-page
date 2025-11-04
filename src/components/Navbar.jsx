@@ -39,7 +39,7 @@ export default function Navbar() {
         </div>
 
         <div className="flex items-center space-x-4">
-          <button className="bg-[#0154AA] text-white px-4 py-2 rounded-[10px] hover:bg-blue-700 cursor-pointer">
+          <button className="bg-[#0154AA] text-white px-4 py-2 rounded-lg hover:bg-blue-700 cursor-pointer">
             Resume Builder
           </button>
           <img
