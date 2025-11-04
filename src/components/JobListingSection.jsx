@@ -2,7 +2,7 @@ import React from 'react';
 import { IoSearchOutline, IoLocationOutline } from 'react-icons/io5';
 
 import { BsBookmark, BsClock } from 'react-icons/bs';
-import logoPlaceholder from '../assets/images/Tlogo.png';
+import logoPlaceholder from '../assets/images/microsoftlogo.png';
 
 
 const JobListingSection = () => {
@@ -70,7 +70,7 @@ const JobListingSection = () => {
                             <BsClock className="text-sm shrink-0" />
                             <span>{job.timeAgo}</span>
                             <span>•</span>
-                            <span>{job.applicants}</span>
+                            <span className=' text-[#0154AA]'>{job.applicants}</span>
                         </div>
                     </div>
                 </div>
@@ -145,9 +145,9 @@ const JobListingSection = () => {
 
             {/* Featured Jobs Section */}
             <div className="mb-6">
-                <div className="flex justify-between items-center mb-3">
-                    <h2 className="text-base font-semibold text-gray-900">Featured Jobs</h2>
-                    <a href="#" className="text-sm text-[#0154AA] hover:underline">See Featured Jobs</a>
+                <div className="flex items-center mb-3">
+                    <h2 className="text-[20px] font-semibold text-gray-900">Featured Jobs</h2>
+                    <a href="#" className="text-sm text-[#0154AA] underline pl-2">See Featured Jobs</a>
                 </div>
                 <div className="grid grid-cols-4 gap-3">
                     {featuredJobs.map((job) => (
@@ -158,9 +158,9 @@ const JobListingSection = () => {
 
             {/* Recommended Jobs Section */}
             <div className="mb-6">
-                <div className="flex justify-between items-center mb-3">
-                    <h2 className="text-base font-semibold text-gray-900">Recommended Jobs</h2>
-                    <a href="#" className="text-sm text-[#0154AA] hover:underline">See Recommended Jobs</a>
+                <div className="flex  items-center mb-3">
+                    <h2 className="text-[20px] font-semibold text-gray-900">Recommended Jobs</h2>
+                    <a href="#" className="text-sm text-[#0154AA] underline pl-2">See Recommended Jobs</a>
                 </div>
                 <div className="grid grid-cols-4 gap-3">
                     {featuredJobs.map((job) => (
@@ -171,9 +171,9 @@ const JobListingSection = () => {
 
             {/* Latest Jobs Section */}
             <div>
-                <div className="flex justify-between items-center mb-3">
-                    <h2 className="text-base font-semibold text-gray-900">Latest Jobs</h2>
-                    <a href="#" className="text-sm text-[#0154AA] hover:underline">See Latest Jobs</a>
+                <div className="flex  items-center mb-3">
+                    <h2 className="text-[20px] font-semibold text-gray-900">Latest Jobs</h2>
+                    <a href="#" className="text-sm text-[#0154AA] underline pl-2">See Latest Jobs</a>
                 </div>
                 <div className="grid grid-cols-4 gap-3">
                     {[...featuredJobs, ...featuredJobs].map((job, index) => (
