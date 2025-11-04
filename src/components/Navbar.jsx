@@ -6,19 +6,19 @@ import logoPic from "../assets/images/logo.png";
 
 export default function Navbar() {
   return (
-    <nav className="h-[70px] bg-[#FFFFFF] px-10 py-3 flex items-center justify-between">
+    <nav className="min-h-[70px] bg-[#FFFFFF] px-4 sm:px-6 lg:px-10 py-3 flex flex-wrap items-center justify-between gap-4">
 
       <div className="flex items-center space-x-4">
         <img
           src={logoPic}
           alt="logoPic"
-          className="w-11 h-11 rounded-full cursor-pointer hover:scale-110 transition-transform duration-200"
+          className="w-9 h-9 sm:w-11 sm:h-11 rounded-full cursor-pointer hover:scale-110 transition-transform duration-200"
         />
       </div>
 
-      <div className="flex items-center space-x-4">
-        <h1 className="text-xl font-bold text-[#0154AA] cursor-pointer hover:text-[#013d7a] transition-colors duration-200">Find Jobs</h1>
-        <ul className="hidden md:flex space-x-4 text-[#737A91]">
+      <div className="flex items-center space-x-2 sm:space-x-4">
+        <h1 className="text-lg sm:text-xl font-bold text-[#0154AA] cursor-pointer hover:text-[#013d7a] transition-colors duration-200">Find Jobs</h1>
+        <ul className="hidden xl:flex space-x-3 text-sm text-[#737A91]">
           <li className="hover:text-[#0154AA] cursor-pointer transition-colors duration-200">Top Companies</li>
           <li className="hover:text-[#0154AA] cursor-pointer transition-colors duration-200">Job Tracker</li>
           <li className="hover:text-[#0154AA] cursor-pointer transition-colors duration-200">My Calendar</li>
@@ -28,24 +28,25 @@ export default function Navbar() {
         </ul>
       </div>
 
-      <div className="flex ">
-        <div className="flex items-center flex-1 mx-6 relative w-[241px]">
-          <IoIosSearch className="absolute left-3 top-1/2 -translate-y-1/2 text-[#737A91] w-5 " />
+      <div className="flex items-center gap-2 sm:gap-4">
+        <div className="hidden md:flex items-center relative w-[180px] lg:w-[241px]">
+          <IoIosSearch className="absolute left-3 top-1/2 -translate-y-1/2 text-[#737A91] w-5" />
           <input
             type="text"
             placeholder="Search"
-            className="flex-1 rounded-md px-10 text-[#737A91] py-2 bg-[#F6F9FF] w-full h-[39px] placeholder-[#737A91] focus:outline-none focus:ring-2 focus:ring-[#0154AA] focus:bg-white transition-all duration-200"
+            className="flex-1 rounded-md px-10 text-[#737A91] py-2 bg-[#F6F9FF] w-full h-[39px] placeholder-[#737A91] focus:outline-none focus:ring-2 focus:ring-[#0154AA] focus:bg-white transition-all duration-200 text-sm"
           />
         </div>
 
-        <div className="flex items-center space-x-4">
-          <button className="bg-[#0154AA] text-white px-4 py-2 rounded-lg hover:bg-[#013d7a] active:bg-[#012d5a] cursor-pointer transition-all duration-200">
-            Resume Builder
+        <div className="flex items-center gap-2 sm:gap-4">
+          <button className="bg-[#0154AA] text-white px-3 sm:px-4 py-2 rounded-lg hover:bg-[#013d7a] active:bg-[#012d5a] cursor-pointer transition-all duration-200 text-xs sm:text-sm font-medium">
+            <span className="hidden sm:inline">Resume Builder</span>
+            <span className="sm:hidden">Resume</span>
           </button>
           <img
             src={profilePic}
             alt="Profile"
-            className="w-9 h-9 rounded-full cursor-pointer hover:ring-2 hover:ring-[#0154AA] transition-all duration-200"
+            className="w-8 h-8 sm:w-9 sm:h-9 rounded-full cursor-pointer hover:ring-2 hover:ring-[#0154AA] transition-all duration-200"
           />
         </div>
       </div>

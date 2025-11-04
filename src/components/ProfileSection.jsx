@@ -5,7 +5,7 @@ import { IoIosArrowDown } from "react-icons/io";
 
 const UserProfileCard = () => {
     return (
-        <div className="bg-gray-400 w-full rounded-lg max-w-[346px]">
+        <div className="bg-gray-400 w-full rounded-lg max-w-[346px] mx-auto lg:mx-0">
             <div className="bg-[#F4F4F4] rounded-lg overflow-hidden">
                 {/* Banner and Profile Picture */}
                 <div className="relative">
