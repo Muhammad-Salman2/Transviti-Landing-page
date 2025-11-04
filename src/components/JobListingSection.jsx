@@ -165,8 +165,8 @@ const JobListingSection = () => {
                     <a href="#" className="text-sm text-[#0154AA] underline pl-2 hover:text-[#013d7a] transition-colors duration-200">See Recommended Jobs</a>
                 </div>
                 <div className="grid grid-cols-4 gap-3">
-                    {featuredJobs.map((job) => (
-                        <JobCard key={job.id + 10} job={job} showPromoted={false} />
+                    {[...featuredJobs, ...featuredJobs].map((job, index) => (
+                        <JobCard key={job.id + 10 + index} job={job} showPromoted={false} />
                     ))}
                 </div>
             </div>
