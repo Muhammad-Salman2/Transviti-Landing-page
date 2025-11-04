@@ -43,27 +43,26 @@ const UserProfileCard = () => {
                 <div className="px-5 pb-4 space-y-3 bg-[#FFFFFF] mt-2.5 rounded-lg">
                     <div className="flex justify-between items-center py-2  border-b border-gray-200">
                         <p className="text-gray-600 text-sm">Profile Visitors</p>
-                        <p className="font-semibold text-[#0154AA] text-base">140</p>
+                        <p className=" text-[#0154AA] text-base">140</p>
                     </div>
                     <div className="flex justify-between items-center py-1 border-b border-gray-200">
                         <p className="text-gray-600 text-sm">Resume Viewers</p>
-                        <p className="font-semibold text-[#0154AA] text-base">20</p>
+                        <p className=" text-[#0154AA] text-base">20</p>
                     </div>
                     <div className="flex justify-between items-center py-1 border-b border-gray-200">
                         <p className="text-gray-600 text-sm">My Jobs</p>
-                        <p className="font-semibold text-[#0154AA] text-base">88</p>
+                        <p className=" text-[#0154AA] text-base">88</p>
                     </div>
                 </div>
 
                 {/* Calendar Section */}
                 <div className="flex justify-between items-center px-5 pb-5 pt-5 bg-[#FFFFFF] mt-2.5 rounded-lg">
-                    {/* <div className="bg-gray-50 rounded-lg flex justify-between items-center cursor-pointer hover:bg-gray-100 transition-colors"> */}
                         <div className="text-left">
-                            <h3 className="font-semibold text-gray-900 text-sm">My calendar</h3>
+                            <h3 className="font-bold text-gray-900 text-sm">My calendar</h3>
                             <p className="text-gray-500 text-xs">Upcoming interviews</p>
                         </div>
                         <IoIosArrowDown className="text-gray-600 text-lg cursor-pointer" />
-                    {/* </div> */}
+                    
                 </div>
 
                 
